@@ -1,0 +1,106 @@
+.content {
+  background: #fcf8f1 url('/images/greeting-wallpaper.webp') center / cover no-repeat;
+  padding: 32px max(24px, 12%) 48px;
+  color: #073f43;
+}
+.title { text-align: center; margin: 0 auto 26px; }
+.title h2 { font-size: clamp(40px, 4.6vw, 72px); font-weight: 400; line-height: 1.08; letter-spacing: -.035em; }
+.title h2 span { display: inline-block; color: #c86c36; transform: rotate(-15deg); font-size: .9em; margin-left: 8px; }
+.title p { margin-top: 10px; font-size: clamp(17px, 1.65vw, 25px); line-height: 1.35; }
+.panel { max-width: 1200px; margin: 0 auto; display: grid; gap: 18px; padding: 20px; border: 1px solid #fffdf8; border-radius: 24px; background: #fffcf7f5; box-shadow: 0 12px 40px #835c3814; }
+.material { overflow: hidden; border: 1px solid #f3ded0; border-radius: 18px; background: #fffcf8; }
+.materialHeader { display: flex; align-items: center; gap: 20px; padding: 18px 28px; background: linear-gradient(110deg, #fce5e0, #fbe3df); }
+.materialIcon { width: 48px; height: 55px; flex-shrink: 0; }
+.materialHeader h3 { font-size: clamp(24px, 2.4vw, 36px); font-weight: 400; letter-spacing: -.035em; }
+.materialHeader p { margin-top: 4px; font-size: clamp(15px, 1.45vw, 21px); color: #454039; line-height: 1.35; }
+.envelope { margin-left: auto; display: inline-flex; align-items: center; gap: 10px; flex-shrink: 0; padding: 13px 20px; border-radius: 32px; color: #b83e27; background: #fffcf6; font-size: 18px; }
+.priceColumns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 20px 0; }
+.priceGroup { min-width: 0; padding: 0 26px; }
+.priceGroup + .priceGroup { border-left: 1px solid #f1dcd0; }
+.priceGroup h4 { font-size: clamp(18px, 1.8vw, 27px); font-weight: 400; line-height: 1.25; margin-bottom: 16px; }
+.priceBody { display: flex; gap: 20px; align-items: center; }
+.cardIllustration { width: 82px; height: 124px; flex-shrink: 0; }
+.priceBody table { flex: 1; width: 100%; height: 140px; border: 1px solid #efd4c4; border-spacing: 0; border-radius: 9px; overflow: hidden; font-size: clamp(17px, 1.5vw, 23px); }
+.priceBody td { padding: 10px 14px; border-bottom: 1px solid #efd4c4; white-space: nowrap; }
+.priceBody td + td { border-left: 1px solid #efd4c4; text-align: center; }
+.priceBody tr:last-child td { border-bottom: 0; }
+.priceBody small { font-size: .7em; }
+.note { margin: 0 22px 18px; padding: 11px 18px; border-radius: 12px; color: #c35a3b; background: #fce5df; font-size: 18px; }
+.note span { color: #213945; margin-left: 12px; }
+@media (max-width: 1200px) {
+  .content { padding-right: 6%; padding-left: 6%; }
+  .priceGroup { padding: 0 18px; }
+  .priceBody { gap: 12px; }
+  .cardIllustration { width: 64px; height: 98px; }
+  .priceBody td { padding: 10px; }
+}
+@media (max-width: 760px) {
+  .content { padding: 28px 18px 36px; background-size: auto 100%; }
+  .panel { padding: 12px; border-radius: 20px; }
+  .materialHeader { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 12px; padding: 18px 16px; }
+  .materialIcon { width: 34px; height: 40px; }
+  .envelope { grid-column: 2; justify-self: start; margin-left: 0; padding: 7px 12px; font-size: 15px; }
+  .envelope svg { width: 20px; height: 17px; }
+  .priceColumns { grid-template-columns: 1fr; gap: 20px; }
+  .priceGroup + .priceGroup { border-left: 0; border-top: 1px solid #f1dcd0; padding-top: 20px; }
+  .priceGroup h4 { font-size: 21px; margin-bottom: 14px; }
+  .priceBody table { height: 126px; font-size: 18px; }
+  .priceBody td { padding: 9px 8px; }
+  .note { margin: 0 14px 14px; font-size: 16px; }
+}
+@media (max-width: 380px) {
+  .content { padding-right: 10px; padding-left: 10px; }
+  .panel { padding: 8px; }
+  .priceGroup { padding-right: 12px; padding-left: 12px; }
+  .cardIllustration { width: 48px; height: 74px; }
+  .priceBody { gap: 8px; }
+  .priceBody td { padding: 8px 6px; }
+}
+
+@media (min-width: 1000px) {
+  .content { min-height: 0; display: grid; grid-template-rows: auto minmax(0, 1fr); gap: 1.2vh; padding: 1.2vh 14% 1.6vh; }
+  .title { margin: 0; }
+  .title h2 { font-size: 4.8vh; }
+  .title p { font-size: 1.85vh; margin-top: .4vh; }
+  .panel { min-height: 0; width: 100%; max-width: 1200px; grid-template-rows: 1fr 1.12fr; gap: 1.1vh; padding: 1.2vh; border-radius: 2.2vh; }
+  .material { min-height: 0; display: flex; flex-direction: column; border-radius: 1.6vh; }
+  .materialHeader { flex-shrink: 0; padding: 1vh 1.6vw; gap: 1.2vw; }
+  .materialIcon { width: 3.4vh; height: 3.9vh; }
+  .materialHeader h3 { font-size: 2.7vh; }
+  .materialHeader p { font-size: 1.65vh; margin-top: .3vh; }
+  .envelope { font-size: 1.6vh; padding: .8vh 1.2vw; gap: .6vw; }
+  .envelope svg { width: 2.2vh; height: 1.9vh; }
+  .priceColumns { flex: 1; min-height: 0; padding: 1vh 0; }
+  .priceGroup { min-height: 0; display: flex; flex-direction: column; padding: 0 1.5vw; }
+  .priceGroup h4 { font-size: 2.1vh; margin-bottom: .7vh; }
+  .priceBody { flex: 1; min-height: 0; gap: 1.2vw; }
+  .cardIllustration { width: 5.8vh; height: 8.8vh; }
+  .priceBody table { height: 100%; font-size: 1.95vh; }
+  .priceBody td { padding: .35vh .7vw; }
+  .note { flex-shrink: 0; margin: 0 1.4vw .7vh; padding: .5vh 1vw; font-size: 1.6vh; }
+}
+@media (min-width: 1000px) {
+  .materialHeader { padding-top: .7vh; padding-bottom: .7vh; }
+  .priceBody table { height: auto; align-self: stretch; font-size: 1.8vh; }
+  .priceBody td { padding-top: .15vh; padding-bottom: .15vh; }
+  .cardIllustration { height: 7.2vh; width: 4.8vh; }
+}
+
+@media (min-width: 761px) {
+  .content { display: block; padding: 32px max(24px, 8%) 48px; }
+  .title { margin-bottom: 26px; }
+  .title h2 { font-size: clamp(36px, 3.5vw, 56px); }
+  .title p { font-size: 20px; margin-top: 10px; }
+  .panel { grid-template-rows: auto; gap: 26px; padding: 30px; }
+  .panel > button { justify-self: center; }
+}
+
+@media (min-width: 761px) {
+  .content { width: 100%; max-width: 1264px; margin: 0 auto; padding: 42px 32px 56px; background: none; }
+  .title { text-align: left; margin: 0 0 28px; padding-bottom: 24px; border-bottom: 1px solid #e6dcd0; }
+  .title h2 { font-size: clamp(32px, 3vw, 44px); letter-spacing: -.025em; }
+  .title h2 span { font-size: .65em; color: #bb7657; }
+  .title p { font-size: 17px; color: #6b756d; }
+  .panel { max-width: none; padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; gap: 24px; }
+  .panel > button { min-width: 290px; min-height: 48px; }
+}
